@@ -20,7 +20,8 @@
   <style>
 
     /* =========================================================
-       VIDEO LINKS - GITHUB PAGES FULL LANDING PAGE
+       VIDEO LINKS - GITHUB PAGES
+       FULL RESPONSIVE - NO DEVICE BREAKPOINT
        ========================================================= */
 
 
@@ -37,6 +38,7 @@
     body {
       width: 100%;
       min-height: 100%;
+
       margin: 0;
       padding: 0;
 
@@ -51,11 +53,13 @@
         sans-serif;
 
       color: #ffffff;
+
+      -webkit-font-smoothing: antialiased;
     }
 
 
     /* =========================================================
-       FULL PAGE
+       PAGE
        ========================================================= */
 
     .vl-page {
@@ -69,8 +73,8 @@
       justify-content: center;
 
       padding:
-        30px
-        20px;
+        clamp(18px, 4vw, 35px)
+        clamp(10px, 4vw, 25px);
 
       background:
 
@@ -91,6 +95,7 @@
     .vl-wrapper {
 
       width: 100%;
+
       max-width: 680px;
 
       margin: 0 auto;
@@ -98,24 +103,30 @@
 
 
     /* =========================================================
-       IMAGE
+       IMAGE / POSTER
        ========================================================= */
 
     .vl-image-box {
 
       position: relative;
 
-      width: 30%;
+      width: 100%;
+
+      /*
+       * Batasi ukuran gambar agar tidak terlalu besar.
+       * Tetap responsive pada semua device.
+       */
+
+      max-width: 480px;
 
       margin:
-        0 0
-        18px 0;
-
-      padding: 0;
+        0 auto
+        clamp(14px, 2.5vw, 20px);
 
       overflow: hidden;
 
-      border-radius: 18px;
+      border-radius:
+        clamp(12px, 2vw, 18px);
 
       background: #1f2533;
 
@@ -135,8 +146,6 @@
 
       width: 100%;
       height: auto;
-
-      max-width: 100%;
 
       margin: 0;
       padding: 0;
@@ -180,9 +189,13 @@
       align-items: center;
       justify-content: space-between;
 
+      gap: 10px;
+
+      width: 100%;
+
       margin:
         0 0
-        12px 0;
+        clamp(9px, 2vw, 12px);
 
       padding:
         0 3px;
@@ -201,19 +214,21 @@
 
       gap: 8px;
 
+      min-width: 0;
+
       color: #aeb5c5;
 
-      font-size: 13px;
+      font-size:
+        clamp(11px, 1.8vw, 13px);
 
       font-weight: 700;
 
-      letter-spacing: 1px;
+      letter-spacing:
+        clamp(.6px, .15vw, 1px);
 
       line-height: 18px;
     }
 
-
-    /* TITLE DOT */
 
     .vl-title::before {
 
@@ -241,13 +256,19 @@
 
     .vl-count {
 
+      flex:
+        0 0 auto;
+
       color: #7f899d;
 
-      font-size: 11px;
+      font-size:
+        clamp(9px, 1.6vw, 11px);
 
       font-weight: 600;
 
       letter-spacing: .3px;
+
+      white-space: nowrap;
     }
 
 
@@ -277,17 +298,18 @@
 
       width: 100%;
 
-      min-height: 76px;
+      min-height:
+        clamp(66px, 10vw, 76px);
 
       margin:
         0 0
-        12px 0;
+        clamp(9px, 1.8vw, 12px);
 
       padding:
-        10px
-        16px
-        10px
-        18px;
+        clamp(8px, 1.8vw, 10px)
+        clamp(10px, 2.5vw, 16px)
+        clamp(8px, 1.8vw, 10px)
+        clamp(11px, 2.8vw, 18px);
 
       background: #1f2533;
 
@@ -295,7 +317,8 @@
         1px solid
         #3a4353;
 
-      border-radius: 16px;
+      border-radius:
+        clamp(12px, 2vw, 16px);
 
       color: #ffffff;
 
@@ -312,7 +335,7 @@
 
 
     /* =========================================================
-       CARD HOVER
+       HOVER
        ========================================================= */
 
     .vl-card:hover {
@@ -334,7 +357,7 @@
 
 
     /* =========================================================
-       LEFT COLOR LINE
+       COLOR LINE
        ========================================================= */
 
     .vl-card.red {
@@ -453,25 +476,32 @@
       z-index: 2;
 
       flex:
-        0 0 40px;
+        0 0
+        clamp(34px, 6vw, 40px);
 
-      width: 40px;
-      height: 40px;
+      width:
+        clamp(34px, 6vw, 40px);
+
+      height:
+        clamp(34px, 6vw, 40px);
 
       display: flex;
 
       align-items: center;
       justify-content: center;
 
-      margin-right: 14px;
+      margin-right:
+        clamp(9px, 2vw, 14px);
 
       background: #303747;
 
-      border-radius: 12px;
+      border-radius:
+        clamp(9px, 1.8vw, 12px);
 
       color: #ffffff;
 
-      font-size: 16px;
+      font-size:
+        clamp(13px, 2.5vw, 16px);
 
       line-height: 1;
 
@@ -490,11 +520,10 @@
 
     .vl-icon.alt {
 
-      font-size: 17px;
+      font-size:
+        clamp(14px, 2.7vw, 17px);
     }
 
-
-    /* ICON HOVER */
 
     .vl-card:hover .vl-icon {
 
@@ -504,8 +533,6 @@
       background: #363e50;
     }
 
-
-    /* ICON GLOW */
 
     .vl-card.red:hover .vl-icon {
 
@@ -564,7 +591,7 @@
 
       margin:
         0 0
-        3px 0;
+        3px;
     }
 
 
@@ -580,11 +607,13 @@
 
       color: #ffffff;
 
-      font-size: 16px;
+      font-size:
+        clamp(13px, 2.4vw, 16px);
 
       font-weight: 700;
 
-      line-height: 20px;
+      line-height:
+        clamp(17px, 3vw, 20px);
 
       white-space: nowrap;
 
@@ -603,21 +632,25 @@
       flex:
         0 0 auto;
 
-      margin-left: 8px;
+      margin-left:
+        clamp(5px, 1.5vw, 8px);
 
       padding:
-        3px
-        7px;
+        clamp(2px, .5vw, 3px)
+        clamp(5px, 1vw, 7px);
 
-      border-radius: 6px;
+      border-radius:
+        clamp(5px, 1vw, 6px);
 
-      font-size: 9px;
+      font-size:
+        clamp(7px, 1.4vw, 9px);
 
       font-weight: 800;
 
-      letter-spacing: .6px;
+      letter-spacing: .5px;
 
-      line-height: 12px;
+      line-height:
+        clamp(10px, 2vw, 12px);
     }
 
 
@@ -673,11 +706,13 @@
 
       color: #aeb5c5;
 
-      font-size: 13px;
+      font-size:
+        clamp(10px, 2vw, 13px);
 
       font-weight: 400;
 
-      line-height: 18px;
+      line-height:
+        clamp(15px, 2.7vw, 18px);
 
       white-space: nowrap;
 
@@ -701,9 +736,11 @@
 
       color: #758096;
 
-      font-size: 10px;
+      font-size:
+        clamp(8px, 1.6vw, 10px);
 
-      line-height: 14px;
+      line-height:
+        clamp(12px, 2.5vw, 14px);
     }
 
 
@@ -713,11 +750,15 @@
 
     .vl-status-dot {
 
-      width: 5px;
-      height: 5px;
+      width:
+        clamp(4px, .8vw, 5px);
+
+      height:
+        clamp(4px, .8vw, 5px);
 
       flex:
-        0 0 5px;
+        0 0
+        clamp(4px, .8vw, 5px);
 
       margin-right: 5px;
 
@@ -732,7 +773,7 @@
 
 
     /* =========================================================
-       UNAVAILABLE STATUS
+       UNAVAILABLE
        ========================================================= */
 
     .vl-card.unavailable .vl-status {
@@ -792,11 +833,13 @@
       flex:
         0 0 auto;
 
-      margin-left: 12px;
+      margin-left:
+        clamp(6px, 2vw, 12px);
 
       color: #8d96a8;
 
-      font-size: 27px;
+      font-size:
+        clamp(21px, 4vw, 27px);
 
       font-weight: 300;
 
@@ -823,13 +866,15 @@
 
     .vl-footer {
 
-      margin-top: 18px;
+      margin-top:
+        clamp(13px, 2.5vw, 18px);
 
       text-align: center;
 
       color: #626d82;
 
-      font-size: 10px;
+      font-size:
+        clamp(8px, 1.6vw, 10px);
 
       line-height: 16px;
 
@@ -838,319 +883,19 @@
 
 
     /* =========================================================
-       TABLET
+       SMALL SCREEN OPTIMIZATION
+       Tetap bukan breakpoint device.
+       Hanya memastikan teks panjang tidak merusak layout.
        ========================================================= */
 
-    @media (max-width: 768px) {
+    .vl-title,
+    .vl-count,
+    .vl-name,
+    .vl-description {
 
-      .vl-page {
+      overflow: hidden;
 
-        padding:
-          25px
-          16px;
-      }
-
-
-      .vl-wrapper {
-
-        max-width: 100%;
-      }
-
-
-      .vl-image-box {
-
-        border-radius: 16px;
-
-        margin-bottom: 16px;
-      }
-
-
-      .vl-card {
-
-        min-height: 72px;
-
-        padding:
-          9px
-          14px
-          9px
-          15px;
-
-        border-radius: 15px;
-      }
-
-
-      .vl-icon {
-
-        flex-basis: 38px;
-
-        width: 38px;
-        height: 38px;
-
-        margin-right: 12px;
-
-        border-radius: 11px;
-      }
-
-
-      .vl-name {
-
-        font-size: 15px;
-
-        line-height: 19px;
-      }
-
-
-      .vl-description {
-
-        font-size: 12px;
-
-        line-height: 17px;
-      }
-
-
-      .vl-status {
-
-        font-size: 9px;
-      }
-
-
-      .vl-badge {
-
-        font-size: 8px;
-
-        padding:
-          2px
-          6px;
-      }
-
-    }
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 480px) {
-
-      .vl-page {
-
-        min-height: 100vh;
-
-        padding:
-          20px
-          10px;
-      }
-
-
-      .vl-image-box {
-
-        border-radius: 14px;
-
-        margin-bottom: 15px;
-      }
-
-
-      .vl-header {
-
-        margin-bottom: 9px;
-
-        padding:
-          0 2px;
-      }
-
-
-      .vl-title {
-
-        font-size: 12px;
-
-        letter-spacing: .9px;
-      }
-
-
-      .vl-count {
-
-        font-size: 10px;
-      }
-
-
-      .vl-card {
-
-        min-height: 70px;
-
-        margin-bottom: 10px;
-
-        padding:
-          8px
-          11px
-          8px
-          12px;
-
-        border-radius: 14px;
-      }
-
-
-      .vl-icon {
-
-        flex-basis: 36px;
-
-        width: 36px;
-        height: 36px;
-
-        margin-right: 11px;
-
-        border-radius: 10px;
-
-        font-size: 14px;
-      }
-
-
-      .vl-icon.alt {
-
-        font-size: 15px;
-      }
-
-
-      .vl-name {
-
-        font-size: 14px;
-
-        line-height: 18px;
-      }
-
-
-      .vl-description {
-
-        font-size: 11px;
-
-        line-height: 16px;
-      }
-
-
-      .vl-status {
-
-        font-size: 9px;
-
-        line-height: 13px;
-      }
-
-
-      .vl-status-dot {
-
-        width: 4px;
-        height: 4px;
-
-        flex-basis: 4px;
-      }
-
-
-      .vl-badge {
-
-        margin-left: 6px;
-
-        padding:
-          2px
-          5px;
-
-        border-radius: 5px;
-
-        font-size: 7px;
-
-        line-height: 10px;
-      }
-
-
-      .vl-arrow {
-
-        margin-left: 8px;
-
-        font-size: 24px;
-      }
-
-
-      .vl-footer {
-
-        margin-top: 15px;
-
-        font-size: 9px;
-      }
-
-    }
-
-
-    /* =========================================================
-       VERY SMALL PHONES
-       ========================================================= */
-
-    @media (max-width: 360px) {
-
-      .vl-page {
-
-        padding:
-          16px
-          8px;
-      }
-
-
-      .vl-image-box {
-
-        border-radius: 12px;
-      }
-
-
-      .vl-card {
-
-        min-height: 66px;
-
-        padding:
-          7px
-          9px
-          7px
-          10px;
-      }
-
-
-      .vl-icon {
-
-        flex-basis: 34px;
-
-        width: 34px;
-        height: 34px;
-
-        margin-right: 9px;
-      }
-
-
-      .vl-name {
-
-        font-size: 13px;
-      }
-
-
-      .vl-description {
-
-        font-size: 10px;
-      }
-
-
-      .vl-status {
-
-        font-size: 8px;
-      }
-
-
-      .vl-badge {
-
-        display: none;
-      }
-
-
-      .vl-arrow {
-
-        font-size: 22px;
-
-        margin-left: 6px;
-      }
-
+      text-overflow: ellipsis;
     }
 
 
@@ -1196,8 +941,14 @@
 
       <!-- =====================================================
            IMAGE / POSTER
-           
-           GANTI LINK GAMBAR DI src
+
+           GANTI GAMBAR DI src
+
+           Ukuran otomatis:
+           - Tidak memenuhi seluruh layar
+           - Maksimal 480px
+           - Tetap responsive
+           - Selalu berada di tengah
            ===================================================== -->
 
       <div class="vl-image-box">
@@ -1222,6 +973,7 @@
           VIDEO LINKS
         </div>
 
+
         <div class="vl-count">
 
           <span class="vl-count-dot">
@@ -1237,7 +989,6 @@
 
       <!-- =====================================================
            VIDEO 1 - MAIN
-           
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1294,11 +1045,11 @@
       </a>
 
 
-
       <!-- =====================================================
            VIDEO 2 - UNAVAILABLE
-           
-           TETAP BISA DIKLIK
+
+           Tetap bisa diklik.
+           Hanya status/tampilannya unavailable.
            ===================================================== -->
 
       <a
@@ -1354,10 +1105,8 @@
       </a>
 
 
-
       <!-- =====================================================
            ALTERNATIVE LINK
-           
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1409,13 +1158,14 @@
       </a>
 
 
-
       <!-- =====================================================
            FOOTER
            ===================================================== -->
 
       <div class="vl-footer">
+
         Select a video link above
+
       </div>
 
 
