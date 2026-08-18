@@ -25,7 +25,7 @@
 
 
     /* =========================================================
-       GLOBAL
+       GLOBAL RESET
        ========================================================= */
 
     * {
@@ -98,10 +98,10 @@
 
 
     /* =========================================================
-       HERO IMAGE
+       IMAGE
        ========================================================= */
 
-    .vl-hero {
+    .vl-image-box {
 
       position: relative;
 
@@ -111,7 +111,11 @@
         0 0
         18px 0;
 
+      padding: 0;
+
       overflow: hidden;
+
+      border-radius: 18px;
 
       background: #1f2533;
 
@@ -119,57 +123,49 @@
         1px solid
         #3a4353;
 
-      border-radius: 18px;
-
       box-shadow:
-        0 10px 35px
+        0 12px 35px
         rgba(0,0,0,.20);
     }
 
 
-    /* IMAGE */
-
-    .vl-hero img {
+    .vl-image {
 
       display: block;
 
       width: 100%;
       height: auto;
 
-      max-height: 420px;
-
-      object-fit: cover;
-
-      border: 0;
+      max-width: 100%;
 
       margin: 0;
       padding: 0;
+
+      object-fit: contain;
     }
 
 
-    /* IMAGE OVERLAY */
+    /* =========================================================
+       IMAGE OVERLAY
+       ========================================================= */
 
-    .vl-hero::after {
+    .vl-image-box::after {
 
       content: "";
 
       position: absolute;
 
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
 
-      height: 35%;
+      pointer-events: none;
 
       background:
 
         linear-gradient(
-          to top,
-          rgba(17,23,37,.25),
-          transparent
+          to bottom,
+          transparent 65%,
+          rgba(17,23,37,.12)
         );
-
-      pointer-events: none;
     }
 
 
@@ -217,7 +213,7 @@
     }
 
 
-    /* TITLE INDICATOR */
+    /* TITLE DOT */
 
     .vl-title::before {
 
@@ -486,15 +482,11 @@
     }
 
 
-    /* PLAY ICON */
-
     .vl-icon.play {
 
       padding-left: 2px;
     }
 
-
-    /* ALTERNATIVE ICON */
 
     .vl-icon.alt {
 
@@ -502,9 +494,7 @@
     }
 
 
-    /* =========================================================
-       ICON HOVER
-       ========================================================= */
+    /* ICON HOVER */
 
     .vl-card:hover .vl-icon {
 
@@ -515,9 +505,7 @@
     }
 
 
-    /* =========================================================
-       ICON GLOW
-       ========================================================= */
+    /* ICON GLOW */
 
     .vl-card.red:hover .vl-icon {
 
@@ -767,10 +755,6 @@
     }
 
 
-    /* =========================================================
-       RED PULSE
-       ========================================================= */
-
     @keyframes vl-unavailable-pulse {
 
       0%,
@@ -873,15 +857,11 @@
       }
 
 
-      .vl-hero {
+      .vl-image-box {
 
         border-radius: 16px;
-      }
 
-
-      .vl-hero img {
-
-        max-height: 360px;
+        margin-bottom: 16px;
       }
 
 
@@ -958,27 +938,24 @@
 
         padding:
           20px
-          12px;
+          10px;
       }
 
 
-      .vl-hero {
+      .vl-image-box {
+
+        border-radius: 14px;
 
         margin-bottom: 15px;
-
-        border-radius: 15px;
-      }
-
-
-      .vl-hero img {
-
-        max-height: 300px;
       }
 
 
       .vl-header {
 
         margin-bottom: 9px;
+
+        padding:
+          0 2px;
       }
 
 
@@ -1089,6 +1066,14 @@
         font-size: 24px;
       }
 
+
+      .vl-footer {
+
+        margin-top: 15px;
+
+        font-size: 9px;
+      }
+
     }
 
 
@@ -1102,19 +1087,13 @@
 
         padding:
           16px
-          9px;
+          8px;
       }
 
 
-      .vl-hero {
+      .vl-image-box {
 
-        border-radius: 13px;
-      }
-
-
-      .vl-hero img {
-
-        max-height: 240px;
+        border-radius: 12px;
       }
 
 
@@ -1216,21 +1195,21 @@
 
 
       <!-- =====================================================
-           HERO IMAGE
-
-           GANTI URL FOTO DI src
+           IMAGE / POSTER
+           
+           GANTI LINK GAMBAR DI src
            ===================================================== -->
 
-      <div class="vl-hero">
+      <div class="vl-image-box">
 
         <img
+          class="vl-image"
           src="https://cdn.aceimg.com/PSqYXQOti.png"
           alt="Video Preview"
           loading="eager"
         >
 
       </div>
-
 
 
       <!-- =====================================================
@@ -1242,7 +1221,6 @@
         <div class="vl-title">
           VIDEO LINKS
         </div>
-
 
         <div class="vl-count">
 
@@ -1257,10 +1235,9 @@
       </header>
 
 
-
       <!-- =====================================================
            VIDEO 1 - MAIN
-
+           
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1320,9 +1297,8 @@
 
       <!-- =====================================================
            VIDEO 2 - UNAVAILABLE
-
+           
            TETAP BISA DIKLIK
-           HANYA STATUSNYA UNAVAILABLE
            ===================================================== -->
 
       <a
@@ -1381,7 +1357,7 @@
 
       <!-- =====================================================
            ALTERNATIVE LINK
-
+           
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1444,7 +1420,6 @@
 
 
     </div>
-
 
   </main>
 
