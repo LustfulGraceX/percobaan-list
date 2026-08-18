@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#111725"
+  >
+
+  <title>Video Links</title>
+
+
+  <style>
+
+    /* =========================================================
+       VIDEO LINKS - GITHUB PAGES FULL LANDING PAGE
+       ========================================================= */
+
+
+    /* =========================================================
+       GLOBAL
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+
+      background: #111725;
+    }
+
+
+    body {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       FULL PAGE
+       ========================================================= */
+
+    .vl-page {
+
+      width: 100%;
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        30px
+        20px;
+
+      background:
+
+        radial-gradient(
+          circle at 50% 15%,
+          rgba(92,111,255,.08),
+          transparent 35%
+        ),
+
+        #111725;
+    }
+
+
+    /* =========================================================
+       MAIN WRAPPER
+       ========================================================= */
+
+    .vl-wrapper {
+
+      width: 100%;
+      max-width: 680px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .vl-header {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      margin:
+        0 0
+        12px 0;
+
+      padding:
+        0 3px;
+    }
+
+
+    /* =========================================================
+       TITLE
+       ========================================================= */
+
+    .vl-title {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: #aeb5c5;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      line-height: 18px;
+    }
+
+
+    /* Title indicator */
+
+    .vl-title::before {
+
+      content: "";
+
+      width: 6px;
+      height: 6px;
+
+      flex:
+        0 0 6px;
+
+      background: #5c6fff;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 8px
+        rgba(92,111,255,.55);
+    }
+
+
+    /* =========================================================
+       LINK COUNTER
+       ========================================================= */
+
+    .vl-count {
+
+      color: #7f899d;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      letter-spacing: .3px;
+    }
+
+
+    .vl-count-dot {
+
+      color: #48d597;
+
+      margin-right: 4px;
+
+      text-shadow:
+        0 0 7px
+        rgba(72,213,151,.6);
+    }
+
+
+    /* =========================================================
+       CARD
+       ========================================================= */
+
+    .vl-card {
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      width: 100%;
+
+      min-height: 76px;
+
+      margin:
+        0 0
+        12px 0;
+
+      padding:
+        10px
+        16px
+        10px
+        18px;
+
+      background: #1f2533;
+
+      border:
+        1px solid
+        #3a4353;
+
+      border-radius: 16px;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      overflow: hidden;
+
+      transition:
+        transform .18s ease,
+        background .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
+    }
+
+
+    /* =========================================================
+       CARD HOVER
+       ========================================================= */
+
+    .vl-card:hover {
+
+      transform:
+        translateY(-2px);
+
+      background: #252c3a;
+
+      border-color: #4a5568;
+    }
+
+
+    .vl-card:active {
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+       LEFT COLOR LINE
+       ========================================================= */
+
+    .vl-card.red {
+
+      border-left:
+        4px solid
+        #e91e45;
+    }
+
+
+    .vl-card.blue {
+
+      border-left:
+        4px solid
+        #4169e1;
+    }
+
+
+    .vl-card.purple {
+
+      border-left:
+        4px solid
+        #8b3dff;
+    }
+
+
+    /* =========================================================
+       HOVER GLOW
+       ========================================================= */
+
+    .vl-card.red:hover {
+
+      box-shadow:
+        0 8px 25px
+        rgba(233,30,69,.10);
+    }
+
+
+    .vl-card.blue:hover {
+
+      box-shadow:
+        0 8px 25px
+        rgba(65,105,225,.10);
+    }
+
+
+    .vl-card.purple:hover {
+
+      box-shadow:
+        0 8px 25px
+        rgba(139,61,255,.10);
+    }
+
+
+    /* =========================================================
+       MAIN SHIMMER
+       ========================================================= */
+
+    .vl-card.main-link::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: -120%;
+
+      width: 70%;
+      height: 100%;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.035),
+          transparent
+        );
+
+      transform:
+        skewX(-18deg);
+
+      animation:
+        vl-shimmer
+        5s ease-in-out infinite;
+
+      pointer-events: none;
+    }
+
+
+    @keyframes vl-shimmer {
+
+      0% {
+        left: -120%;
+      }
+
+      35% {
+        left: 140%;
+      }
+
+      100% {
+        left: 140%;
+      }
+
+    }
+
+
+    /* =========================================================
+       ICON
+       ========================================================= */
+
+    .vl-icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      flex:
+        0 0 40px;
+
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      margin-right: 14px;
+
+      background: #303747;
+
+      border-radius: 12px;
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      line-height: 1;
+
+      transition:
+        transform .18s ease,
+        background .18s ease,
+        box-shadow .18s ease;
+    }
+
+
+    .vl-icon.play {
+
+      padding-left: 2px;
+    }
+
+
+    .vl-icon.alt {
+
+      font-size: 17px;
+    }
+
+
+    /* Icon hover */
+
+    .vl-card:hover .vl-icon {
+
+      transform:
+        scale(1.06);
+
+      background: #363e50;
+    }
+
+
+    /* Icon glow */
+
+    .vl-card.red:hover .vl-icon {
+
+      box-shadow:
+        0 0 15px
+        rgba(233,30,69,.15);
+    }
+
+
+    .vl-card.blue:hover .vl-icon {
+
+      box-shadow:
+        0 0 15px
+        rgba(65,105,225,.15);
+    }
+
+
+    .vl-card.purple:hover .vl-icon {
+
+      box-shadow:
+        0 0 15px
+        rgba(139,61,255,.15);
+    }
+
+
+    /* =========================================================
+       CONTENT
+       ========================================================= */
+
+    .vl-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      flex:
+        1 1 auto;
+
+      min-width: 0;
+
+      overflow: hidden;
+    }
+
+
+    /* =========================================================
+       NAME ROW
+       ========================================================= */
+
+    .vl-name-row {
+
+      display: flex;
+
+      align-items: center;
+
+      min-width: 0;
+
+      margin:
+        0 0
+        3px 0;
+    }
+
+
+    /* =========================================================
+       NAME
+       ========================================================= */
+
+    .vl-name {
+
+      display: block;
+
+      min-width: 0;
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      font-weight: 700;
+
+      line-height: 20px;
+
+      white-space: nowrap;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+    }
+
+
+    /* =========================================================
+       BADGE
+       ========================================================= */
+
+    .vl-badge {
+
+      flex:
+        0 0 auto;
+
+      margin-left: 8px;
+
+      padding:
+        3px
+        7px;
+
+      border-radius: 6px;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing: .6px;
+
+      line-height: 12px;
+    }
+
+
+    /* =========================================================
+       MAIN BADGE - GREEN
+       ========================================================= */
+
+    .main-badge {
+
+      color: #65e6a5;
+
+      background:
+        rgba(72,213,151,.12);
+
+      border:
+        1px solid
+        rgba(72,213,151,.28);
+
+      text-shadow:
+        0 0 6px
+        rgba(72,213,151,.25);
+    }
+
+
+    /* =========================================================
+       UNAVAILABLE BADGE - RED
+       ========================================================= */
+
+    .unavailable-badge {
+
+      color: #ff7183;
+
+      background:
+        rgba(233,30,69,.10);
+
+      border:
+        1px solid
+        rgba(233,30,69,.24);
+
+      text-shadow:
+        0 0 6px
+        rgba(233,30,69,.20);
+    }
+
+
+    /* =========================================================
+       DESCRIPTION
+       ========================================================= */
+
+    .vl-description {
+
+      display: block;
+
+      color: #aeb5c5;
+
+      font-size: 13px;
+
+      font-weight: 400;
+
+      line-height: 18px;
+
+      white-space: nowrap;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+    }
+
+
+    /* =========================================================
+       STATUS
+       ========================================================= */
+
+    .vl-status {
+
+      display: flex;
+
+      align-items: center;
+
+      margin-top: 2px;
+
+      color: #758096;
+
+      font-size: 10px;
+
+      line-height: 14px;
+    }
+
+
+    /* =========================================================
+       STATUS DOT - GREEN
+       ========================================================= */
+
+    .vl-status-dot {
+
+      width: 5px;
+      height: 5px;
+
+      flex:
+        0 0 5px;
+
+      margin-right: 5px;
+
+      background: #48d597;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 7px
+        rgba(72,213,151,.55);
+    }
+
+
+    /* =========================================================
+       UNAVAILABLE STATUS - RED
+       ========================================================= */
+
+    .vl-card.unavailable .vl-status {
+
+      color: #ed6678;
+    }
+
+
+    .vl-card.unavailable .vl-status-dot {
+
+      background: #e91e45;
+
+      box-shadow:
+        0 0 7px
+        rgba(233,30,69,.55);
+
+      animation:
+        vl-unavailable-pulse
+        2s ease-in-out infinite;
+    }
+
+
+    @keyframes vl-unavailable-pulse {
+
+      0%,
+      100% {
+
+        opacity: .65;
+
+        box-shadow:
+          0 0 5px
+          rgba(233,30,69,.35);
+      }
+
+      50% {
+
+        opacity: 1;
+
+        box-shadow:
+          0 0 9px
+          rgba(233,30,69,.65);
+      }
+
+    }
+
+
+    /* =========================================================
+       ARROW
+       ========================================================= */
+
+    .vl-arrow {
+
+      position: relative;
+
+      z-index: 2;
+
+      flex:
+        0 0 auto;
+
+      margin-left: 12px;
+
+      color: #8d96a8;
+
+      font-size: 27px;
+
+      font-weight: 300;
+
+      line-height: 1;
+
+      transition:
+        transform .18s ease,
+        color .18s ease;
+    }
+
+
+    .vl-card:hover .vl-arrow {
+
+      transform:
+        translateX(4px);
+
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .vl-footer {
+
+      margin-top: 18px;
+
+      text-align: center;
+
+      color: #626d82;
+
+      font-size: 10px;
+
+      line-height: 16px;
+
+      letter-spacing: .2px;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 768px) {
+
+      .vl-page {
+
+        padding:
+          25px
+          16px;
+      }
+
+
+      .vl-wrapper {
+
+        max-width: 100%;
+      }
+
+
+      .vl-card {
+
+        min-height: 72px;
+
+        padding:
+          9px
+          14px
+          9px
+          15px;
+
+        border-radius: 15px;
+      }
+
+
+      .vl-icon {
+
+        flex-basis: 38px;
+
+        width: 38px;
+        height: 38px;
+
+        margin-right: 12px;
+
+        border-radius: 11px;
+      }
+
+
+      .vl-name {
+
+        font-size: 15px;
+
+        line-height: 19px;
+      }
+
+
+      .vl-description {
+
+        font-size: 12px;
+
+        line-height: 17px;
+      }
+
+
+      .vl-status {
+
+        font-size: 9px;
+      }
+
+
+      .vl-badge {
+
+        font-size: 8px;
+
+        padding:
+          2px
+          6px;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 480px) {
+
+      .vl-page {
+
+        min-height: 100vh;
+
+        padding:
+          20px
+          12px;
+      }
+
+
+      .vl-header {
+
+        margin-bottom: 9px;
+      }
+
+
+      .vl-title {
+
+        font-size: 12px;
+
+        letter-spacing: .9px;
+      }
+
+
+      .vl-count {
+
+        font-size: 10px;
+      }
+
+
+      .vl-card {
+
+        min-height: 70px;
+
+        margin-bottom: 10px;
+
+        padding:
+          8px
+          11px
+          8px
+          12px;
+
+        border-radius: 14px;
+      }
+
+
+      .vl-icon {
+
+        flex-basis: 36px;
+
+        width: 36px;
+        height: 36px;
+
+        margin-right: 11px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+      }
+
+
+      .vl-icon.alt {
+
+        font-size: 15px;
+      }
+
+
+      .vl-name {
+
+        font-size: 14px;
+
+        line-height: 18px;
+      }
+
+
+      .vl-description {
+
+        font-size: 11px;
+
+        line-height: 16px;
+      }
+
+
+      .vl-status {
+
+        font-size: 9px;
+
+        line-height: 13px;
+      }
+
+
+      .vl-status-dot {
+
+        width: 4px;
+        height: 4px;
+
+        flex-basis: 4px;
+      }
+
+
+      .vl-badge {
+
+        margin-left: 6px;
+
+        padding:
+          2px
+          5px;
+
+        border-radius: 5px;
+
+        font-size: 7px;
+
+        line-height: 10px;
+      }
+
+
+      .vl-arrow {
+
+        margin-left: 8px;
+
+        font-size: 24px;
+      }
+
+    }
+
+
+    /* =========================================================
+       VERY SMALL PHONES
+       ========================================================= */
+
+    @media (max-width: 360px) {
+
+      .vl-page {
+
+        padding:
+          16px
+          9px;
+      }
+
+
+      .vl-card {
+
+        min-height: 66px;
+
+        padding:
+          7px
+          9px
+          7px
+          10px;
+      }
+
+
+      .vl-icon {
+
+        flex-basis: 34px;
+
+        width: 34px;
+        height: 34px;
+
+        margin-right: 9px;
+      }
+
+
+      .vl-name {
+
+        font-size: 13px;
+      }
+
+
+      .vl-description {
+
+        font-size: 10px;
+      }
+
+
+      .vl-status {
+
+        font-size: 8px;
+      }
+
+
+      .vl-badge {
+
+        display: none;
+      }
+
+
+      .vl-arrow {
+
+        font-size: 22px;
+
+        margin-left: 6px;
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .vl-card,
+      .vl-icon,
+      .vl-arrow {
+
+        transition: none;
+      }
+
+
+      .vl-card.main-link::after,
+      .vl-card.unavailable .vl-status-dot {
+
+        animation: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       FULL PAGE
+       ======================================================= -->
+
+  <main class="vl-page">
+
+
+    <div class="vl-wrapper">
+
+
+      <!-- =====================================================
+           HEADER
+           ===================================================== -->
+
+      <header class="vl-header">
+
+        <div class="vl-title">
+          VIDEO LINKS
+        </div>
+
+        <div class="vl-count">
+
+          <span class="vl-count-dot">
+            ●
+          </span>
+
+          2 LINKS AVAILABLE
+
+        </div>
+
+      </header>
+
+
+      <!-- =====================================================
+           VIDEO 1 - MAIN
+           
+           GANTI LINK DI href
+           ===================================================== -->
+
+      <a
+        class="vl-card red main-link"
+        href="https://example.com/video1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="vl-icon play">
+          ▶
+        </span>
+
+
+        <span class="vl-content">
+
+
+          <span class="vl-name-row">
+
+            <span class="vl-name">
+              Video 1
+            </span>
+
+
+            <span class="vl-badge main-badge">
+              MAIN
+            </span>
+
+          </span>
+
+
+          <span class="vl-description">
+            Open the main video link
+          </span>
+
+
+          <span class="vl-status">
+
+            <span class="vl-status-dot"></span>
+
+            Available
+
+          </span>
+
+
+        </span>
+
+
+        <span class="vl-arrow">
+          ›
+        </span>
+
+      </a>
+
+
+
+      <!-- =====================================================
+           VIDEO 2 - UNAVAILABLE
+           
+           TETAP BISA DIKLIK
+           
+           Hanya tampilannya yang unavailable
+           ===================================================== -->
+
+      <a
+        class="vl-card blue unavailable"
+        href="https://example.com/video2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="vl-icon play">
+          ▶
+        </span>
+
+
+        <span class="vl-content">
+
+
+          <span class="vl-name-row">
+
+            <span class="vl-name">
+              Video 2
+            </span>
+
+
+            <span class="vl-badge unavailable-badge">
+              UNAVAILABLE
+            </span>
+
+          </span>
+
+
+          <span class="vl-description">
+            This video is currently unavailable
+          </span>
+
+
+          <span class="vl-status">
+
+            <span class="vl-status-dot"></span>
+
+            Unavailable
+
+          </span>
+
+
+        </span>
+
+
+        <span class="vl-arrow">
+          ›
+        </span>
+
+      </a>
+
+
+
+      <!-- =====================================================
+           ALTERNATIVE LINK
+           
+           GANTI LINK DI href
+           ===================================================== -->
+
+      <a
+        class="vl-card purple"
+        href="https://example.com/alternative"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="vl-icon alt">
+          🎬
+        </span>
+
+
+        <span class="vl-content">
+
+
+          <span class="vl-name-row">
+
+            <span class="vl-name">
+              Alternative Link
+            </span>
+
+          </span>
+
+
+          <span class="vl-description">
+            Use this if the main links are unavailable
+          </span>
+
+
+          <span class="vl-status">
+
+            <span class="vl-status-dot"></span>
+
+            Backup Available
+
+          </span>
+
+
+        </span>
+
+
+        <span class="vl-arrow">
+          ›
+        </span>
+
+      </a>
+
+
+
+      <!-- =====================================================
+           FOOTER
+           ===================================================== -->
+
+      <div class="vl-footer">
+        Select a video link above
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+</body>
+</html>
