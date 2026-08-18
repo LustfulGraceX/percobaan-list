@@ -16,7 +16,8 @@
   <style>
 
     /* =========================================================
-       VIDEO LINKS - MOBILE FOCUSED
+       VIDEO LINKS
+       MOBILE FOCUSED - LARGE TEXT VERSION
        GITHUB PAGES
        ========================================================= */
 
@@ -52,7 +53,7 @@
 
 
     /* =========================================================
-       MAIN PAGE
+       PAGE
        ========================================================= */
 
     .vl-page {
@@ -61,6 +62,7 @@
       min-height: 100vh;
 
       display: flex;
+
       justify-content: center;
 
       padding:
@@ -80,7 +82,7 @@
 
 
     /* =========================================================
-       MAIN WRAPPER
+       WRAPPER
        ========================================================= */
 
     .vl-wrapper {
@@ -101,9 +103,9 @@
 
       position: relative;
 
-      width: 60%;
+      width: 55%;
 
-      max-width: 360px;
+      max-width: 300px;
 
       margin:
         0 auto
@@ -172,13 +174,14 @@
       display: flex;
 
       align-items: center;
+
       justify-content: space-between;
 
       gap: 10px;
 
       margin:
         0 0
-        12px 0;
+        13px 0;
 
       padding:
         0 3px;
@@ -199,13 +202,13 @@
 
       color: #c0c7d5;
 
-      font-size: 15px;
+      font-size: 16px;
 
       font-weight: 700;
 
       letter-spacing: .8px;
 
-      line-height: 20px;
+      line-height: 21px;
     }
 
 
@@ -230,7 +233,7 @@
 
 
     /* =========================================================
-       LINK COUNTER
+       COUNTER
        ========================================================= */
 
     .vl-count {
@@ -273,16 +276,16 @@
 
       width: 100%;
 
-      min-height: 82px;
+      min-height: 88px;
 
       margin:
         0 0
-        11px 0;
+        12px 0;
 
       padding:
-        11px
+        12px
         13px
-        11px
+        12px
         14px;
 
       background: #1f2533;
@@ -308,7 +311,7 @@
 
 
     /* =========================================================
-       CARD HOVER
+       HOVER
        ========================================================= */
 
     .vl-card:hover {
@@ -330,7 +333,7 @@
 
 
     /* =========================================================
-       LEFT COLOR LINE
+       COLOR LINE
        ========================================================= */
 
     .vl-card.red {
@@ -358,7 +361,7 @@
 
 
     /* =========================================================
-       HOVER GLOW
+       GLOW
        ========================================================= */
 
     .vl-card.red:hover {
@@ -386,7 +389,7 @@
 
 
     /* =========================================================
-       MAIN SHIMMER
+       SHIMMER
        ========================================================= */
 
     .vl-card.main-link::after {
@@ -396,9 +399,11 @@
       position: absolute;
 
       top: 0;
+
       left: -120%;
 
       width: 70%;
+
       height: 100%;
 
       background:
@@ -449,10 +454,10 @@
       z-index: 2;
 
       flex:
-        0 0 42px;
+        0 0 44px;
 
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
 
       display: flex;
 
@@ -467,7 +472,7 @@
 
       color: #ffffff;
 
-      font-size: 17px;
+      font-size: 18px;
 
       line-height: 1;
 
@@ -486,7 +491,7 @@
 
     .vl-icon.alt {
 
-      font-size: 18px;
+      font-size: 19px;
     }
 
 
@@ -560,7 +565,7 @@
 
       margin:
         0 0
-        3px 0;
+        4px 0;
     }
 
 
@@ -576,11 +581,11 @@
 
       color: #ffffff;
 
-      font-size: 17px;
+      font-size: 19px;
 
       font-weight: 700;
 
-      line-height: 21px;
+      line-height: 23px;
 
       white-space: nowrap;
 
@@ -599,21 +604,21 @@
       flex:
         0 0 auto;
 
-      margin-left: 7px;
+      margin-left: 8px;
 
       padding:
         3px
-        6px;
+        7px;
 
       border-radius: 6px;
 
-      font-size: 9px;
+      font-size: 10px;
 
       font-weight: 800;
 
       letter-spacing: .5px;
 
-      line-height: 12px;
+      line-height: 13px;
     }
 
 
@@ -631,6 +636,10 @@
       border:
         1px solid
         rgba(72,213,151,.28);
+
+      text-shadow:
+        0 0 6px
+        rgba(72,213,151,.25);
     }
 
 
@@ -648,6 +657,10 @@
       border:
         1px solid
         rgba(233,30,69,.24);
+
+      text-shadow:
+        0 0 6px
+        rgba(233,30,69,.20);
     }
 
 
@@ -661,11 +674,11 @@
 
       color: #b3bbca;
 
-      font-size: 13px;
+      font-size: 14px;
 
       font-weight: 400;
 
-      line-height: 18px;
+      line-height: 19px;
 
       white-space: nowrap;
 
@@ -685,13 +698,13 @@
 
       align-items: center;
 
-      margin-top: 3px;
+      margin-top: 4px;
 
       color: #7f899d;
 
-      font-size: 11px;
+      font-size: 12px;
 
-      line-height: 14px;
+      line-height: 15px;
     }
 
 
@@ -701,13 +714,13 @@
 
     .vl-status-dot {
 
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
 
       flex:
-        0 0 5px;
+        0 0 6px;
 
-      margin-right: 5px;
+      margin-right: 6px;
 
       background: #48d597;
 
@@ -720,7 +733,7 @@
 
 
     /* =========================================================
-       UNAVAILABLE
+       UNAVAILABLE STATUS
        ========================================================= */
 
     .vl-card.unavailable .vl-status {
@@ -784,7 +797,7 @@
 
       color: #8d96a8;
 
-      font-size: 28px;
+      font-size: 30px;
 
       font-weight: 300;
 
@@ -811,34 +824,34 @@
 
     .vl-footer {
 
-      margin-top: 17px;
+      margin-top: 18px;
 
       text-align: center;
 
       color: #69758a;
 
-      font-size: 11px;
+      font-size: 12px;
 
-      line-height: 17px;
+      line-height: 18px;
 
       letter-spacing: .2px;
     }
 
 
     /* =========================================================
-       RESPONSIVE IMAGE
+       RESPONSIVE
        
-       Tidak menggunakan breakpoint tablet/mobile.
-       Ukuran gambar mengikuti lebar layar.
+       Tidak membedakan tablet/mobile secara desain.
+       Hanya menyesuaikan ukuran gambar agar tidak terlalu besar.
        ========================================================= */
 
     @media (max-width: 680px) {
 
       .vl-image-box {
 
-        width: 58%;
+        width: 55%;
 
-        max-width: 300px;
+        max-width: 280px;
       }
 
     }
@@ -856,25 +869,17 @@
 
       .vl-image-box {
 
-        width: 58%;
+        width: 54%;
 
-        max-width: 240px;
+        max-width: 230px;
 
         margin-bottom: 18px;
-
-        border-radius: 13px;
-      }
-
-
-      .vl-header {
-
-        margin-bottom: 11px;
       }
 
 
       .vl-title {
 
-        font-size: 14px;
+        font-size: 15px;
       }
 
 
@@ -886,52 +891,46 @@
 
       .vl-card {
 
-        min-height: 80px;
+        min-height: 86px;
 
         padding:
-          10px
           11px
           10px
+          11px
           12px;
-
-        border-radius: 14px;
       }
 
 
       .vl-icon {
 
-        flex-basis: 41px;
+        flex-basis: 42px;
 
-        width: 41px;
-        height: 41px;
+        width: 42px;
+        height: 42px;
 
         margin-right: 11px;
-
-        border-radius: 10px;
-
-        font-size: 16px;
       }
 
 
       .vl-name {
 
-        font-size: 16px;
+        font-size: 18px;
 
-        line-height: 20px;
+        line-height: 22px;
       }
 
 
       .vl-description {
 
-        font-size: 12px;
+        font-size: 13px;
 
-        line-height: 17px;
+        line-height: 18px;
       }
 
 
       .vl-status {
 
-        font-size: 10px;
+        font-size: 11px;
 
         line-height: 14px;
       }
@@ -939,9 +938,9 @@
 
       .vl-arrow {
 
-        font-size: 27px;
+        font-size: 29px;
 
-        margin-left: 6px;
+        margin-left: 5px;
       }
 
     }
@@ -955,21 +954,37 @@
 
       .vl-image-box {
 
-        width: 55%;
+        width: 52%;
 
-        max-width: 200px;
+        max-width: 190px;
       }
 
 
       .vl-name {
 
-        font-size: 15px;
+        font-size: 17px;
       }
 
 
       .vl-description {
 
-        font-size: 11px;
+        font-size: 12px;
+      }
+
+
+      .vl-status {
+
+        font-size: 10px;
+      }
+
+
+      .vl-badge {
+
+        font-size: 9px;
+
+        padding:
+          3px
+          6px;
       }
 
     }
