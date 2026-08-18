@@ -98,6 +98,82 @@
 
 
     /* =========================================================
+       HERO IMAGE
+       ========================================================= */
+
+    .vl-hero {
+
+      position: relative;
+
+      width: 100%;
+
+      margin:
+        0 0
+        18px 0;
+
+      overflow: hidden;
+
+      background: #1f2533;
+
+      border:
+        1px solid
+        #3a4353;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.20);
+    }
+
+
+    /* IMAGE */
+
+    .vl-hero img {
+
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      max-height: 420px;
+
+      object-fit: cover;
+
+      border: 0;
+
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* IMAGE OVERLAY */
+
+    .vl-hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 35%;
+
+      background:
+
+        linear-gradient(
+          to top,
+          rgba(17,23,37,.25),
+          transparent
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================================
        HEADER
        ========================================================= */
 
@@ -141,7 +217,7 @@
     }
 
 
-    /* Title indicator */
+    /* TITLE INDICATOR */
 
     .vl-title::before {
 
@@ -410,11 +486,15 @@
     }
 
 
+    /* PLAY ICON */
+
     .vl-icon.play {
 
       padding-left: 2px;
     }
 
+
+    /* ALTERNATIVE ICON */
 
     .vl-icon.alt {
 
@@ -422,7 +502,9 @@
     }
 
 
-    /* Icon hover */
+    /* =========================================================
+       ICON HOVER
+       ========================================================= */
 
     .vl-card:hover .vl-icon {
 
@@ -433,7 +515,9 @@
     }
 
 
-    /* Icon glow */
+    /* =========================================================
+       ICON GLOW
+       ========================================================= */
 
     .vl-card.red:hover .vl-icon {
 
@@ -550,7 +634,7 @@
 
 
     /* =========================================================
-       MAIN BADGE - GREEN
+       MAIN BADGE
        ========================================================= */
 
     .main-badge {
@@ -571,7 +655,7 @@
 
 
     /* =========================================================
-       UNAVAILABLE BADGE - RED
+       UNAVAILABLE BADGE
        ========================================================= */
 
     .unavailable-badge {
@@ -636,7 +720,7 @@
 
 
     /* =========================================================
-       STATUS DOT - GREEN
+       STATUS DOT
        ========================================================= */
 
     .vl-status-dot {
@@ -660,7 +744,7 @@
 
 
     /* =========================================================
-       UNAVAILABLE STATUS - RED
+       UNAVAILABLE STATUS
        ========================================================= */
 
     .vl-card.unavailable .vl-status {
@@ -682,6 +766,10 @@
         2s ease-in-out infinite;
     }
 
+
+    /* =========================================================
+       RED PULSE
+       ========================================================= */
 
     @keyframes vl-unavailable-pulse {
 
@@ -785,6 +873,18 @@
       }
 
 
+      .vl-hero {
+
+        border-radius: 16px;
+      }
+
+
+      .vl-hero img {
+
+        max-height: 360px;
+      }
+
+
       .vl-card {
 
         min-height: 72px;
@@ -859,6 +959,20 @@
         padding:
           20px
           12px;
+      }
+
+
+      .vl-hero {
+
+        margin-bottom: 15px;
+
+        border-radius: 15px;
+      }
+
+
+      .vl-hero img {
+
+        max-height: 300px;
       }
 
 
@@ -992,6 +1106,18 @@
       }
 
 
+      .vl-hero {
+
+        border-radius: 13px;
+      }
+
+
+      .vl-hero img {
+
+        max-height: 240px;
+      }
+
+
       .vl-card {
 
         min-height: 66px;
@@ -1090,6 +1216,24 @@
 
 
       <!-- =====================================================
+           HERO IMAGE
+
+           GANTI URL FOTO DI src
+           ===================================================== -->
+
+      <div class="vl-hero">
+
+        <img
+          src="https://example.com/image.jpg"
+          alt="Video Preview"
+          loading="eager"
+        >
+
+      </div>
+
+
+
+      <!-- =====================================================
            HEADER
            ===================================================== -->
 
@@ -1098,6 +1242,7 @@
         <div class="vl-title">
           VIDEO LINKS
         </div>
+
 
         <div class="vl-count">
 
@@ -1112,9 +1257,10 @@
       </header>
 
 
+
       <!-- =====================================================
            VIDEO 1 - MAIN
-           
+
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1174,10 +1320,9 @@
 
       <!-- =====================================================
            VIDEO 2 - UNAVAILABLE
-           
+
            TETAP BISA DIKLIK
-           
-           Hanya tampilannya yang unavailable
+           HANYA STATUSNYA UNAVAILABLE
            ===================================================== -->
 
       <a
@@ -1236,7 +1381,7 @@
 
       <!-- =====================================================
            ALTERNATIVE LINK
-           
+
            GANTI LINK DI href
            ===================================================== -->
 
@@ -1299,6 +1444,7 @@
 
 
     </div>
+
 
   </main>
 
